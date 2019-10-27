@@ -40,3 +40,4 @@ Notes:
 		b- This is an actual bug on endpoint "PATCH /quote" in the Quotes API.
 	2- Token can be changed from BaseTest parent TestCases 
 	3- To execute all test, exec: mvn test
+	******4- MAKE SURE TO CHANGE API TOKEN IN BaseTest.java, OTHERWISE ALL TESTS WILL FAIL****************************
