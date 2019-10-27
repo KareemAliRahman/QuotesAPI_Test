@@ -1,0 +1,42 @@
+Test cases description:
+
+1-Adding a new quote to your private collection.
+	a- add quote without token (security)
+	b- add quote without quote (fun)
+	c- add quote without author (fun)
+	d- add valid quote with author and tags.
+
+2-Updating that quote with a change.
+	a- update quote without token.
+	b- update quote with same data (no update).
+	c- update quote with wrong id.
+	d- update quote with valid data (containing changes).
+
+
+3-Getting that quote after adding.
+	a- get quote without token
+	b- get quote without quote id
+	c- get quote with invlaid quote id
+	d- fet quote with valid quote id
+
+4-Deleting a quote
+	a- del without token
+	b- del without id
+	c- del with invlaid id
+	d- del with valid id
+
+5-Searching for an existent quote with the following parameters: min length 100-max length 300.
+	a- search without token
+	b- search with illogical range min=300 max=l00
+	c- search with valid data found in public collection
+	d- search with valid data found in private collection
+	e- search with valid data not found in private collection
+
+-----------------------------------------------------------------------------------------------------
+Notes:
+
+	1- In case of Update scenario, API always return 401: unauthorized (I have tried the 2 given API tokens in the assignment description).this bahvior can only be described in 2 cases:
+		a- for this API token, there is no permissions to update quotes. or
+		b- This is an actual bug on endpoint "PATCH /quote" in the Quotes API.
+	2- Token can be changed from BaseTest parent TestCases 
+	3- To execute all test, exec: mvn test
